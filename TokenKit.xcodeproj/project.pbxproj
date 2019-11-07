@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		409CF2522373B8B3002E5B3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2512373B8B3002E5B3A /* AppDelegate.m */; };
+		409CF2552373B8B3002E5B3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2542373B8B3002E5B3A /* ViewController.m */; };
+		409CF2582373B8B3002E5B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2562373B8B3002E5B3A /* Main.storyboard */; };
+		409CF25A2373B8B4002E5B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2592373B8B4002E5B3A /* Assets.xcassets */; };
+		409CF25D2373B8B4002E5B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF25B2373B8B4002E5B3A /* LaunchScreen.storyboard */; };
+		409CF2602373B8B4002E5B3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF25F2373B8B4002E5B3A /* main.m */; };
+		409CF26D2373BB41002E5B3A /* TKHello.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF26B2373BB41002E5B3A /* TKHello.m */; };
+		409CF2712373BC1C002E5B3A /* TokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409CF2672373BAE0002E5B3A /* TokenSDK.framework */; };
+		409CF2722373BC1C002E5B3A /* TokenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 409CF2672373BAE0002E5B3A /* TokenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AE799EA5E7E54674621272 /* Pods_TokenKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		409CF2732373BC1D002E5B3A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				409CF2722373BC1C002E5B3A /* TokenSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		409CF24D2373B8B3002E5B3A /* TokenKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		409CF2502373B8B3002E5B3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		409CF2512373B8B3002E5B3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		409CF2532373B8B3002E5B3A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		409CF2542373B8B3002E5B3A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		409CF2572373B8B3002E5B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		409CF2592373B8B4002E5B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		409CF25C2373B8B4002E5B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		409CF25E2373B8B4002E5B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		409CF25F2373B8B4002E5B3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		409CF2672373BAE0002E5B3A /* TokenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TokenSDK.framework; sourceTree = "<group>"; };
+		409CF26B2373BB41002E5B3A /* TKHello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKHello.m; sourceTree = "<group>"; };
+		409CF26C2373BB41002E5B3A /* TKHello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKHello.h; sourceTree = "<group>"; };
+		79AE799EA5E7E54674621272 /* Pods_TokenKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokenKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8132491118F87E60FA1CCA64 /* Pods-TokenKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenKit.release.xcconfig"; path = "Target Support Files/Pods-TokenKit/Pods-TokenKit.release.xcconfig"; sourceTree = "<group>"; };
+		9BEDD1DD035DB69C391CCA29 /* Pods-TokenKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenKit.debug.xcconfig"; path = "Target Support Files/Pods-TokenKit/Pods-TokenKit.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		409CF24A2373B8B3002E5B3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */,
+				409CF2712373BC1C002E5B3A /* TokenSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		409CF2442373B8B3002E5B3A = {
+			isa = PBXGroup;
+			children = (
+				409CF26E2373BB6A002E5B3A /* Resource */,
+				409CF26A2373BB41002E5B3A /* TokenCore */,
+				409CF2692373BB1F002E5B3A /* Framework */,
+				409CF24F2373B8B3002E5B3A /* TokenKit */,
+				409CF24E2373B8B3002E5B3A /* Products */,
+				DF5433D90230BD66D2E1C5C9 /* Pods */,
+				AFC0328D631E7928088C556D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		409CF24E2373B8B3002E5B3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				409CF24D2373B8B3002E5B3A /* TokenKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		409CF24F2373B8B3002E5B3A /* TokenKit */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2502373B8B3002E5B3A /* AppDelegate.h */,
+				409CF2512373B8B3002E5B3A /* AppDelegate.m */,
+				409CF2532373B8B3002E5B3A /* ViewController.h */,
+				409CF2542373B8B3002E5B3A /* ViewController.m */,
+				409CF2562373B8B3002E5B3A /* Main.storyboard */,
+				409CF2592373B8B4002E5B3A /* Assets.xcassets */,
+				409CF25B2373B8B4002E5B3A /* LaunchScreen.storyboard */,
+				409CF25E2373B8B4002E5B3A /* Info.plist */,
+				409CF25F2373B8B4002E5B3A /* main.m */,
+			);
+			path = TokenKit;
+			sourceTree = "<group>";
+		};
+		409CF2692373BB1F002E5B3A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2672373BAE0002E5B3A /* TokenSDK.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		409CF26A2373BB41002E5B3A /* TokenCore */ = {
+			isa = PBXGroup;
+			children = (
+				409CF26B2373BB41002E5B3A /* TKHello.m */,
+				409CF26C2373BB41002E5B3A /* TKHello.h */,
+			);
+			path = TokenCore;
+			sourceTree = "<group>";
+		};
+		409CF26E2373BB6A002E5B3A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AFC0328D631E7928088C556D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79AE799EA5E7E54674621272 /* Pods_TokenKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF5433D90230BD66D2E1C5C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BEDD1DD035DB69C391CCA29 /* Pods-TokenKit.debug.xcconfig */,
+				8132491118F87E60FA1CCA64 /* Pods-TokenKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		409CF24C2373B8B3002E5B3A /* TokenKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409CF2632373B8B4002E5B3A /* Build configuration list for PBXNativeTarget "TokenKit" */;
+			buildPhases = (
+				643CCE49D4FE56A27C891861 /* [CP] Check Pods Manifest.lock */,
+				409CF2492373B8B3002E5B3A /* Sources */,
+				409CF24A2373B8B3002E5B3A /* Frameworks */,
+				409CF24B2373B8B3002E5B3A /* Resources */,
+				9F5628279C0619EF93F74739 /* [CP] Embed Pods Frameworks */,
+				409CF2732373BC1D002E5B3A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TokenKit;
+			productName = TokenKit;
+			productReference = 409CF24D2373B8B3002E5B3A /* TokenKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		409CF2452373B8B3002E5B3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = easy;
+				TargetAttributes = {
+					409CF24C2373B8B3002E5B3A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 409CF2482373B8B3002E5B3A /* Build configuration list for PBXProject "TokenKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 409CF2442373B8B3002E5B3A;
+			productRefGroup = 409CF24E2373B8B3002E5B3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				409CF24C2373B8B3002E5B3A /* TokenKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		409CF24B2373B8B3002E5B3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409CF25D2373B8B4002E5B3A /* LaunchScreen.storyboard in Resources */,
+				409CF25A2373B8B4002E5B3A /* Assets.xcassets in Resources */,
+				409CF2582373B8B3002E5B3A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		643CCE49D4FE56A27C891861 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TokenKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F5628279C0619EF93F74739 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/secp256k1.c/secp256k1.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		409CF2492373B8B3002E5B3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409CF2552373B8B3002E5B3A /* ViewController.m in Sources */,
+				409CF2602373B8B4002E5B3A /* main.m in Sources */,
+				409CF2522373B8B3002E5B3A /* AppDelegate.m in Sources */,
+				409CF26D2373BB41002E5B3A /* TKHello.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		409CF2562373B8B3002E5B3A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				409CF2572373B8B3002E5B3A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		409CF25B2373B8B4002E5B3A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				409CF25C2373B8B4002E5B3A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		409CF2612373B8B4002E5B3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		409CF2622373B8B4002E5B3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		409CF2642373B8B4002E5B3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEDD1DD035DB69C391CCA29 /* Pods-TokenKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				INFOPLIST_FILE = TokenKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		409CF2652373B8B4002E5B3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8132491118F87E60FA1CCA64 /* Pods-TokenKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				INFOPLIST_FILE = TokenKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		409CF2482373B8B3002E5B3A /* Build configuration list for PBXProject "TokenKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409CF2612373B8B4002E5B3A /* Debug */,
+				409CF2622373B8B4002E5B3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409CF2632373B8B4002E5B3A /* Build configuration list for PBXNativeTarget "TokenKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409CF2642373B8B4002E5B3A /* Debug */,
+				409CF2652373B8B4002E5B3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 409CF2452373B8B3002E5B3A /* Project object */;
+}
