@@ -1,0 +1,6 @@
+framework module ELibsManager {
+  umbrella header "ELibsManager.h"
+
+  export *
+  module * { export * }
+}

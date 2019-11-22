@@ -27,6 +27,13 @@ FOUNDATION_EXPORT NSString * const tk_api_upload;
 FOUNDATION_EXPORT NSString * const tk_api_did_fork;
 FOUNDATION_EXPORT NSString * const tk_api_company_auth;
 
+FOUNDATION_EXPORT NSString * const tk_api_is_user_auth;
+FOUNDATION_EXPORT NSString * const tk_api_is_company_auth;
+FOUNDATION_EXPORT NSString * const tk_api_certificate_initiate;
+FOUNDATION_EXPORT NSString * const tk_api_certificate_confirm;
+
+FOUNDATION_EXPORT NSString * const tk_api_chain_base;
+
 
 @interface TokenNetwork : NSObject
 

@@ -1,0 +1,6 @@
+framework module EServiceSDK {
+  umbrella header "EServiceSDK.h"
+
+  export *
+  module * { export * }
+}

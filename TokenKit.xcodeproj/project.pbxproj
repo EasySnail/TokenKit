@@ -7,15 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402346462373E2E100843CAA /* TokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402346442373E2D300843CAA /* TokenSDK.framework */; };
+		402346472373E2E100843CAA /* TokenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 402346442373E2D300843CAA /* TokenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4023464C2373E3F600843CAA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4023464B2373E3F600843CAA /* LoginViewController.m */; };
+		4023464F2373E40B00843CAA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4023464E2373E40B00843CAA /* HomeViewController.m */; };
+		402346552373E4AD00843CAA /* UITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346522373E4AD00843CAA /* UITools.m */; };
+		402346562373E4AD00843CAA /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346532373E4AD00843CAA /* Account.m */; };
+		4023465A2373EFD300843CAA /* TKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346592373EFD300843CAA /* TKNavigationController.m */; };
+		402346612374084A00843CAA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346602374084A00843CAA /* MineViewController.m */; };
+		402346642374086000843CAA /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346632374086000843CAA /* ShoppingViewController.m */; };
+		402346672374086D00843CAA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346662374086D00843CAA /* MessageViewController.m */; };
+		4023466A2374087600843CAA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402346692374087600843CAA /* MenuViewController.m */; };
+		4023466D2374156800843CAA /* TKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4023466C2374156800843CAA /* TKBaseViewController.m */; };
+		4023467023741E2800843CAA /* TKLXAuthenticationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4023466F23741E2800843CAA /* TKLXAuthenticationVC.m */; };
+		4031038F2383CDC60088FEAE /* DeliveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4031038E2383CDC60088FEAE /* DeliveryViewController.m */; };
+		403103922383CED90088FEAE /* ReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403103912383CED90088FEAE /* ReceiveViewController.m */; };
+		403103982383D3B50088FEAE /* BaseTextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403103972383D3B50088FEAE /* BaseTextFieldController.m */; };
+		4065C456237509030089A78D /* TKAuthenticationDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4065C455237509030089A78D /* TKAuthenticationDetailVC.m */; };
+		4065C459237517940089A78D /* TokenAuthDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4065C458237517940089A78D /* TokenAuthDetailCell.m */; };
+		4065C45F23753D5E0089A78D /* TKTransferRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4065C45E23753D5E0089A78D /* TKTransferRecordVC.m */; };
+		4065C462237542D70089A78D /* TokenTransferRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4065C461237542D70089A78D /* TokenTransferRecordCell.m */; };
+		4065C46623755AA60089A78D /* TKTransferRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4065C46523755AA60089A78D /* TKTransferRecordModel.m */; };
+		40894536238545D5007D9A50 /* TKSingletonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40894535238545D5007D9A50 /* TKSingletonManager.m */; };
+		40894539238546E5007D9A50 /* NSString+tks_time.m in Sources */ = {isa = PBXBuildFile; fileRef = 40894538238546E5007D9A50 /* NSString+tks_time.m */; };
 		409CF2522373B8B3002E5B3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2512373B8B3002E5B3A /* AppDelegate.m */; };
 		409CF2552373B8B3002E5B3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2542373B8B3002E5B3A /* ViewController.m */; };
 		409CF2582373B8B3002E5B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2562373B8B3002E5B3A /* Main.storyboard */; };
 		409CF25A2373B8B4002E5B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2592373B8B4002E5B3A /* Assets.xcassets */; };
 		409CF25D2373B8B4002E5B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409CF25B2373B8B4002E5B3A /* LaunchScreen.storyboard */; };
 		409CF2602373B8B4002E5B3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF25F2373B8B4002E5B3A /* main.m */; };
-		409CF26D2373BB41002E5B3A /* TKHello.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF26B2373BB41002E5B3A /* TKHello.m */; };
-		409CF2712373BC1C002E5B3A /* TokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409CF2672373BAE0002E5B3A /* TokenSDK.framework */; };
-		409CF2722373BC1C002E5B3A /* TokenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 409CF2672373BAE0002E5B3A /* TokenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		409CF2752373C104002E5B3A /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 409CF2742373C104002E5B3A /* Resource.bundle */; };
+		409CF2792373C1B2002E5B3A /* UIImage+tks_kit.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2782373C1B2002E5B3A /* UIImage+tks_kit.m */; };
+		409CF2802373C230002E5B3A /* TokenUIApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF27E2373C230002E5B3A /* TokenUIApi.m */; };
+		409CF2AA2373C2BE002E5B3A /* TokenCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2872373C2BD002E5B3A /* TokenCompanyCell.m */; };
+		409CF2AB2373C2BE002E5B3A /* TKCompanyAuthenticationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2882373C2BD002E5B3A /* TKCompanyAuthenticationVC.m */; };
+		409CF2AC2373C2BE002E5B3A /* TKIdentityAuthenticationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF28A2373C2BD002E5B3A /* TKIdentityAuthenticationVC.m */; };
+		409CF2AD2373C2BE002E5B3A /* TKIdentityImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF28E2373C2BD002E5B3A /* TKIdentityImagesCell.m */; };
+		409CF2AE2373C2BE002E5B3A /* TKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2912373C2BD002E5B3A /* TKTextField.m */; };
+		409CF2AF2373C2BE002E5B3A /* TKPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2932373C2BD002E5B3A /* TKPhotoPicker.m */; };
+		409CF2B02373C2BE002E5B3A /* UIView+TokenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2972373C2BD002E5B3A /* UIView+TokenView.m */; };
+		409CF2B12373C2BE002E5B3A /* TKBackupPswTextFiedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF29E2373C2BD002E5B3A /* TKBackupPswTextFiedCell.m */; };
+		409CF2B22373C2BE002E5B3A /* TKBackupTitleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A02373C2BD002E5B3A /* TKBackupTitleDetailCell.m */; };
+		409CF2B32373C2BE002E5B3A /* TKAuthenticationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A12373C2BD002E5B3A /* TKAuthenticationCodeCell.m */; };
+		409CF2B42373C2BE002E5B3A /* TKBackUpInputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A42373C2BD002E5B3A /* TKBackUpInputPasswordView.m */; };
+		409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */; };
+		409CF2B62373C2BE002E5B3A /* TKIIdentityPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */; };
+		40D721832387AEE300414ABC /* BackupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D721822387AEE300414ABC /* BackupViewController.m */; };
+		40DBEAC7237EA9BC002970E1 /* TKResetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */; };
+		40DBEACA237EB51B002970E1 /* TKResetPasswordStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */; };
+		40EDE4B823828C7700325286 /* TKUpdatePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EDE4B723828C7700325286 /* TKUpdatePasswordVC.m */; };
 		5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AE799EA5E7E54674621272 /* Pods_TokenKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				409CF2722373BC1C002E5B3A /* TokenSDK.framework in Embed Frameworks */,
+				402346472373E2E100843CAA /* TokenSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +74,50 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		402346442373E2D300843CAA /* TokenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TokenSDK.framework; sourceTree = "<group>"; };
+		4023464A2373E3F600843CAA /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4023464B2373E3F600843CAA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4023464D2373E40B00843CAA /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		4023464E2373E40B00843CAA /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		402346512373E4AD00843CAA /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		402346522373E4AD00843CAA /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
+		402346532373E4AD00843CAA /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		402346542373E4AD00843CAA /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
+		402346572373E55700843CAA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		402346582373EFD300843CAA /* TKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKNavigationController.h; sourceTree = "<group>"; };
+		402346592373EFD300843CAA /* TKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKNavigationController.m; sourceTree = "<group>"; };
+		4023465F2374084A00843CAA /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		402346602374084A00843CAA /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		402346622374086000843CAA /* ShoppingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
+		402346632374086000843CAA /* ShoppingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		402346652374086D00843CAA /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		402346662374086D00843CAA /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		402346682374087600843CAA /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		402346692374087600843CAA /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		4023466B2374156800843CAA /* TKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKBaseViewController.h; sourceTree = "<group>"; };
+		4023466C2374156800843CAA /* TKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKBaseViewController.m; sourceTree = "<group>"; };
+		4023466E23741E2800843CAA /* TKLXAuthenticationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKLXAuthenticationVC.h; sourceTree = "<group>"; };
+		4023466F23741E2800843CAA /* TKLXAuthenticationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKLXAuthenticationVC.m; sourceTree = "<group>"; };
+		4031038D2383CDC60088FEAE /* DeliveryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryViewController.h; sourceTree = "<group>"; };
+		4031038E2383CDC60088FEAE /* DeliveryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryViewController.m; sourceTree = "<group>"; };
+		403103902383CED90088FEAE /* ReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveViewController.h; sourceTree = "<group>"; };
+		403103912383CED90088FEAE /* ReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveViewController.m; sourceTree = "<group>"; };
+		403103962383D3B50088FEAE /* BaseTextFieldController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTextFieldController.h; sourceTree = "<group>"; };
+		403103972383D3B50088FEAE /* BaseTextFieldController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTextFieldController.m; sourceTree = "<group>"; };
+		4065C454237509030089A78D /* TKAuthenticationDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKAuthenticationDetailVC.h; sourceTree = "<group>"; };
+		4065C455237509030089A78D /* TKAuthenticationDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKAuthenticationDetailVC.m; sourceTree = "<group>"; };
+		4065C457237517940089A78D /* TokenAuthDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenAuthDetailCell.h; sourceTree = "<group>"; };
+		4065C458237517940089A78D /* TokenAuthDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenAuthDetailCell.m; sourceTree = "<group>"; };
+		4065C45D23753D5E0089A78D /* TKTransferRecordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTransferRecordVC.h; sourceTree = "<group>"; };
+		4065C45E23753D5E0089A78D /* TKTransferRecordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTransferRecordVC.m; sourceTree = "<group>"; };
+		4065C460237542D70089A78D /* TokenTransferRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenTransferRecordCell.h; sourceTree = "<group>"; };
+		4065C461237542D70089A78D /* TokenTransferRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenTransferRecordCell.m; sourceTree = "<group>"; };
+		4065C46423755AA60089A78D /* TKTransferRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTransferRecordModel.h; sourceTree = "<group>"; };
+		4065C46523755AA60089A78D /* TKTransferRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTransferRecordModel.m; sourceTree = "<group>"; };
+		40894534238545D5007D9A50 /* TKSingletonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKSingletonManager.h; sourceTree = "<group>"; };
+		40894535238545D5007D9A50 /* TKSingletonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKSingletonManager.m; sourceTree = "<group>"; };
+		40894537238546E5007D9A50 /* NSString+tks_time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+tks_time.h"; sourceTree = "<group>"; };
+		40894538238546E5007D9A50 /* NSString+tks_time.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+tks_time.m"; sourceTree = "<group>"; };
 		409CF24D2373B8B3002E5B3A /* TokenKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409CF2502373B8B3002E5B3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		409CF2512373B8B3002E5B3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,9 +128,46 @@
 		409CF25C2373B8B4002E5B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		409CF25E2373B8B4002E5B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409CF25F2373B8B4002E5B3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		409CF2672373BAE0002E5B3A /* TokenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TokenSDK.framework; sourceTree = "<group>"; };
-		409CF26B2373BB41002E5B3A /* TKHello.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKHello.m; sourceTree = "<group>"; };
-		409CF26C2373BB41002E5B3A /* TKHello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKHello.h; sourceTree = "<group>"; };
+		409CF2742373C104002E5B3A /* Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resource.bundle; sourceTree = "<group>"; };
+		409CF2772373C1B2002E5B3A /* UIImage+tks_kit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+tks_kit.h"; sourceTree = "<group>"; };
+		409CF2782373C1B2002E5B3A /* UIImage+tks_kit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+tks_kit.m"; sourceTree = "<group>"; };
+		409CF27E2373C230002E5B3A /* TokenUIApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenUIApi.m; sourceTree = "<group>"; };
+		409CF27F2373C230002E5B3A /* TokenUIApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenUIApi.h; sourceTree = "<group>"; };
+		409CF2832373C2BD002E5B3A /* TKCompanyAuthenticationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCompanyAuthenticationVC.h; sourceTree = "<group>"; };
+		409CF2862373C2BD002E5B3A /* TokenCompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenCompanyCell.h; sourceTree = "<group>"; };
+		409CF2872373C2BD002E5B3A /* TokenCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenCompanyCell.m; sourceTree = "<group>"; };
+		409CF2882373C2BD002E5B3A /* TKCompanyAuthenticationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCompanyAuthenticationVC.m; sourceTree = "<group>"; };
+		409CF28A2373C2BD002E5B3A /* TKIdentityAuthenticationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKIdentityAuthenticationVC.m; sourceTree = "<group>"; };
+		409CF28D2373C2BD002E5B3A /* TKIdentityImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKIdentityImagesCell.h; sourceTree = "<group>"; };
+		409CF28E2373C2BD002E5B3A /* TKIdentityImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKIdentityImagesCell.m; sourceTree = "<group>"; };
+		409CF28F2373C2BD002E5B3A /* TKIdentityAuthenticationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKIdentityAuthenticationVC.h; sourceTree = "<group>"; };
+		409CF2912373C2BD002E5B3A /* TKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTextField.m; sourceTree = "<group>"; };
+		409CF2932373C2BD002E5B3A /* TKPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKPhotoPicker.m; sourceTree = "<group>"; };
+		409CF2942373C2BD002E5B3A /* TKPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKPhotoPicker.h; sourceTree = "<group>"; };
+		409CF2952373C2BD002E5B3A /* UIView+TokenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TokenView.h"; sourceTree = "<group>"; };
+		409CF2962373C2BD002E5B3A /* TKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTextField.h; sourceTree = "<group>"; };
+		409CF2972373C2BD002E5B3A /* UIView+TokenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TokenView.m"; sourceTree = "<group>"; };
+		409CF2992373C2BD002E5B3A /* TKIIdentityPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKIIdentityPasswordVC.h; sourceTree = "<group>"; };
+		409CF29B2373C2BD002E5B3A /* TKBackUpSecretKeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKBackUpSecretKeyView.h; sourceTree = "<group>"; };
+		409CF29C2373C2BD002E5B3A /* TKBackUpInputPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKBackUpInputPasswordView.h; sourceTree = "<group>"; };
+		409CF29E2373C2BD002E5B3A /* TKBackupPswTextFiedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackupPswTextFiedCell.m; sourceTree = "<group>"; };
+		409CF29F2373C2BD002E5B3A /* TKAuthenticationCodeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAuthenticationCodeCell.h; sourceTree = "<group>"; };
+		409CF2A02373C2BD002E5B3A /* TKBackupTitleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackupTitleDetailCell.m; sourceTree = "<group>"; };
+		409CF2A12373C2BD002E5B3A /* TKAuthenticationCodeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAuthenticationCodeCell.m; sourceTree = "<group>"; };
+		409CF2A22373C2BD002E5B3A /* TKBackupPswTextFiedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKBackupPswTextFiedCell.h; sourceTree = "<group>"; };
+		409CF2A32373C2BD002E5B3A /* TKBackupTitleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKBackupTitleDetailCell.h; sourceTree = "<group>"; };
+		409CF2A42373C2BD002E5B3A /* TKBackUpInputPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackUpInputPasswordView.m; sourceTree = "<group>"; };
+		409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackUpSecretKeyView.m; sourceTree = "<group>"; };
+		409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKIIdentityPasswordVC.m; sourceTree = "<group>"; };
+		409CF2B82373C4B8002E5B3A /* TKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKHeader.h; sourceTree = "<group>"; };
+		40D721812387AEE300414ABC /* BackupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupViewController.h; sourceTree = "<group>"; };
+		40D721822387AEE300414ABC /* BackupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupViewController.m; sourceTree = "<group>"; };
+		40DBEAC5237EA9BC002970E1 /* TKResetPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKResetPasswordVC.h; sourceTree = "<group>"; };
+		40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKResetPasswordVC.m; sourceTree = "<group>"; };
+		40DBEAC8237EB51B002970E1 /* TKResetPasswordStepCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKResetPasswordStepCell.h; sourceTree = "<group>"; };
+		40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKResetPasswordStepCell.m; sourceTree = "<group>"; };
+		40EDE4B623828C7700325286 /* TKUpdatePasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKUpdatePasswordVC.h; sourceTree = "<group>"; };
+		40EDE4B723828C7700325286 /* TKUpdatePasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKUpdatePasswordVC.m; sourceTree = "<group>"; };
 		79AE799EA5E7E54674621272 /* Pods_TokenKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokenKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8132491118F87E60FA1CCA64 /* Pods-TokenKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenKit.release.xcconfig"; path = "Target Support Files/Pods-TokenKit/Pods-TokenKit.release.xcconfig"; sourceTree = "<group>"; };
 		9BEDD1DD035DB69C391CCA29 /* Pods-TokenKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenKit.debug.xcconfig"; path = "Target Support Files/Pods-TokenKit/Pods-TokenKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,17 +179,103 @@
 			buildActionMask = 2147483647;
 			files = (
 				5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */,
-				409CF2712373BC1C002E5B3A /* TokenSDK.framework in Frameworks */,
+				402346462373E2E100843CAA /* TokenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		402346482373E3DF00843CAA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4023464A2373E3F600843CAA /* LoginViewController.h */,
+				4023464B2373E3F600843CAA /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		402346492373E3E400843CAA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4023464D2373E40B00843CAA /* HomeViewController.h */,
+				4023464E2373E40B00843CAA /* HomeViewController.m */,
+				4023465B237407FF00843CAA /* Menu */,
+				4023465E2374083200843CAA /* Mine */,
+				4023465D2374081000843CAA /* Shopping */,
+				4023465C2374080600843CAA /* Message */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		402346502373E4AD00843CAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				402346512373E4AD00843CAA /* Account.h */,
+				402346532373E4AD00843CAA /* Account.m */,
+				402346542373E4AD00843CAA /* UITools.h */,
+				402346522373E4AD00843CAA /* UITools.m */,
+				403103962383D3B50088FEAE /* BaseTextFieldController.h */,
+				403103972383D3B50088FEAE /* BaseTextFieldController.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4023465B237407FF00843CAA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				402346682374087600843CAA /* MenuViewController.h */,
+				402346692374087600843CAA /* MenuViewController.m */,
+				4031038D2383CDC60088FEAE /* DeliveryViewController.h */,
+				4031038E2383CDC60088FEAE /* DeliveryViewController.m */,
+				403103902383CED90088FEAE /* ReceiveViewController.h */,
+				403103912383CED90088FEAE /* ReceiveViewController.m */,
+				40D721812387AEE300414ABC /* BackupViewController.h */,
+				40D721822387AEE300414ABC /* BackupViewController.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		4023465C2374080600843CAA /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				402346652374086D00843CAA /* MessageViewController.h */,
+				402346662374086D00843CAA /* MessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		4023465D2374081000843CAA /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				402346622374086000843CAA /* ShoppingViewController.h */,
+				402346632374086000843CAA /* ShoppingViewController.m */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		4023465E2374083200843CAA /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				4023465F2374084A00843CAA /* MineViewController.h */,
+				402346602374084A00843CAA /* MineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		4065C46323755A8A0089A78D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4065C46423755AA60089A78D /* TKTransferRecordModel.h */,
+				4065C46523755AA60089A78D /* TKTransferRecordModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		409CF2442373B8B3002E5B3A = {
 			isa = PBXGroup;
 			children = (
-				409CF26E2373BB6A002E5B3A /* Resource */,
+				409CF26E2373BB6A002E5B3A /* Resources */,
 				409CF26A2373BB41002E5B3A /* TokenCore */,
 				409CF2692373BB1F002E5B3A /* Framework */,
 				409CF24F2373B8B3002E5B3A /* TokenKit */,
@@ -89,10 +296,14 @@
 		409CF24F2373B8B3002E5B3A /* TokenKit */ = {
 			isa = PBXGroup;
 			children = (
+				402346502373E4AD00843CAA /* Utils */,
+				402346492373E3E400843CAA /* Home */,
+				402346482373E3DF00843CAA /* Login */,
 				409CF2502373B8B3002E5B3A /* AppDelegate.h */,
 				409CF2512373B8B3002E5B3A /* AppDelegate.m */,
 				409CF2532373B8B3002E5B3A /* ViewController.h */,
 				409CF2542373B8B3002E5B3A /* ViewController.m */,
+				402346572373E55700843CAA /* PrefixHeader.pch */,
 				409CF2562373B8B3002E5B3A /* Main.storyboard */,
 				409CF2592373B8B4002E5B3A /* Assets.xcassets */,
 				409CF25B2373B8B4002E5B3A /* LaunchScreen.storyboard */,
@@ -105,7 +316,7 @@
 		409CF2692373BB1F002E5B3A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				409CF2672373BAE0002E5B3A /* TokenSDK.framework */,
+				402346442373E2D300843CAA /* TokenSDK.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -113,17 +324,184 @@
 		409CF26A2373BB41002E5B3A /* TokenCore */ = {
 			isa = PBXGroup;
 			children = (
-				409CF26B2373BB41002E5B3A /* TKHello.m */,
-				409CF26C2373BB41002E5B3A /* TKHello.h */,
+				409CF27F2373C230002E5B3A /* TokenUIApi.h */,
+				409CF27E2373C230002E5B3A /* TokenUIApi.m */,
+				409CF27D2373C218002E5B3A /* Module */,
+				409CF2762373C16E002E5B3A /* Utils */,
 			);
 			path = TokenCore;
 			sourceTree = "<group>";
 		};
-		409CF26E2373BB6A002E5B3A /* Resource */ = {
+		409CF26E2373BB6A002E5B3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				409CF2742373C104002E5B3A /* Resource.bundle */,
 			);
-			path = Resource;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		409CF2762373C16E002E5B3A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2772373C1B2002E5B3A /* UIImage+tks_kit.h */,
+				409CF2782373C1B2002E5B3A /* UIImage+tks_kit.m */,
+				409CF2B82373C4B8002E5B3A /* TKHeader.h */,
+				40894534238545D5007D9A50 /* TKSingletonManager.h */,
+				40894535238545D5007D9A50 /* TKSingletonManager.m */,
+				40894537238546E5007D9A50 /* NSString+tks_time.h */,
+				40894538238546E5007D9A50 /* NSString+tks_time.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		409CF27D2373C218002E5B3A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2812373C2BD002E5B3A /* UI */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		409CF2812373C2BD002E5B3A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2902373C2BD002E5B3A /* BaseUI */,
+				409CF2822373C2BD002E5B3A /* CompanyAuthenticationUI */,
+				409CF2892373C2BD002E5B3A /* IdentityAuthenticationUI */,
+				409CF2982373C2BD002E5B3A /* PasswordUI */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		409CF2822373C2BD002E5B3A /* CompanyAuthenticationUI */ = {
+			isa = PBXGroup;
+			children = (
+				4023466E23741E2800843CAA /* TKLXAuthenticationVC.h */,
+				4023466F23741E2800843CAA /* TKLXAuthenticationVC.m */,
+				409CF2832373C2BD002E5B3A /* TKCompanyAuthenticationVC.h */,
+				409CF2882373C2BD002E5B3A /* TKCompanyAuthenticationVC.m */,
+				4065C454237509030089A78D /* TKAuthenticationDetailVC.h */,
+				4065C455237509030089A78D /* TKAuthenticationDetailVC.m */,
+				4065C45D23753D5E0089A78D /* TKTransferRecordVC.h */,
+				4065C45E23753D5E0089A78D /* TKTransferRecordVC.m */,
+				4065C46323755A8A0089A78D /* Model */,
+				409CF2842373C2BD002E5B3A /* view */,
+			);
+			path = CompanyAuthenticationUI;
+			sourceTree = "<group>";
+		};
+		409CF2842373C2BD002E5B3A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2852373C2BD002E5B3A /* cell */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		409CF2852373C2BD002E5B3A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2862373C2BD002E5B3A /* TokenCompanyCell.h */,
+				409CF2872373C2BD002E5B3A /* TokenCompanyCell.m */,
+				4065C457237517940089A78D /* TokenAuthDetailCell.h */,
+				4065C458237517940089A78D /* TokenAuthDetailCell.m */,
+				4065C460237542D70089A78D /* TokenTransferRecordCell.h */,
+				4065C461237542D70089A78D /* TokenTransferRecordCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		409CF2892373C2BD002E5B3A /* IdentityAuthenticationUI */ = {
+			isa = PBXGroup;
+			children = (
+				409CF28F2373C2BD002E5B3A /* TKIdentityAuthenticationVC.h */,
+				409CF28A2373C2BD002E5B3A /* TKIdentityAuthenticationVC.m */,
+				409CF28B2373C2BD002E5B3A /* view */,
+			);
+			path = IdentityAuthenticationUI;
+			sourceTree = "<group>";
+		};
+		409CF28B2373C2BD002E5B3A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				409CF28C2373C2BD002E5B3A /* cell */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		409CF28C2373C2BD002E5B3A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				409CF28D2373C2BD002E5B3A /* TKIdentityImagesCell.h */,
+				409CF28E2373C2BD002E5B3A /* TKIdentityImagesCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		409CF2902373C2BD002E5B3A /* BaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				4023466B2374156800843CAA /* TKBaseViewController.h */,
+				4023466C2374156800843CAA /* TKBaseViewController.m */,
+				402346582373EFD300843CAA /* TKNavigationController.h */,
+				402346592373EFD300843CAA /* TKNavigationController.m */,
+				409CF2962373C2BD002E5B3A /* TKTextField.h */,
+				409CF2912373C2BD002E5B3A /* TKTextField.m */,
+				409CF2952373C2BD002E5B3A /* UIView+TokenView.h */,
+				409CF2972373C2BD002E5B3A /* UIView+TokenView.m */,
+				409CF2922373C2BD002E5B3A /* ImagePicker */,
+			);
+			path = BaseUI;
+			sourceTree = "<group>";
+		};
+		409CF2922373C2BD002E5B3A /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2942373C2BD002E5B3A /* TKPhotoPicker.h */,
+				409CF2932373C2BD002E5B3A /* TKPhotoPicker.m */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		409CF2982373C2BD002E5B3A /* PasswordUI */ = {
+			isa = PBXGroup;
+			children = (
+				409CF2992373C2BD002E5B3A /* TKIIdentityPasswordVC.h */,
+				409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */,
+				40DBEAC5237EA9BC002970E1 /* TKResetPasswordVC.h */,
+				40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */,
+				40EDE4B623828C7700325286 /* TKUpdatePasswordVC.h */,
+				40EDE4B723828C7700325286 /* TKUpdatePasswordVC.m */,
+				409CF29A2373C2BD002E5B3A /* CommonView */,
+			);
+			path = PasswordUI;
+			sourceTree = "<group>";
+		};
+		409CF29A2373C2BD002E5B3A /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				409CF29B2373C2BD002E5B3A /* TKBackUpSecretKeyView.h */,
+				409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */,
+				409CF29C2373C2BD002E5B3A /* TKBackUpInputPasswordView.h */,
+				409CF2A42373C2BD002E5B3A /* TKBackUpInputPasswordView.m */,
+				409CF29D2373C2BD002E5B3A /* cell */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		409CF29D2373C2BD002E5B3A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				409CF29F2373C2BD002E5B3A /* TKAuthenticationCodeCell.h */,
+				409CF2A12373C2BD002E5B3A /* TKAuthenticationCodeCell.m */,
+				409CF2A32373C2BD002E5B3A /* TKBackupTitleDetailCell.h */,
+				409CF2A02373C2BD002E5B3A /* TKBackupTitleDetailCell.m */,
+				409CF2A22373C2BD002E5B3A /* TKBackupPswTextFiedCell.h */,
+				409CF29E2373C2BD002E5B3A /* TKBackupPswTextFiedCell.m */,
+				40DBEAC8237EB51B002970E1 /* TKResetPasswordStepCell.h */,
+				40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		AFC0328D631E7928088C556D /* Frameworks */ = {
@@ -206,6 +584,7 @@
 				409CF25D2373B8B4002E5B3A /* LaunchScreen.storyboard in Resources */,
 				409CF25A2373B8B4002E5B3A /* Assets.xcassets in Resources */,
 				409CF2582373B8B3002E5B3A /* Main.storyboard in Resources */,
+				409CF2752373C104002E5B3A /* Resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,12 +625,15 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${PODS_ROOT}/EasyLibs/Framework/EServiceSDK.framework",
+				"${PODS_ROOT}/EasyLibs/Framework/ELibsManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1.c/secp256k1.framework",
 			);
@@ -262,12 +644,15 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EServiceSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ELibsManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
 			);
@@ -283,10 +668,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409CF2802373C230002E5B3A /* TokenUIApi.m in Sources */,
+				4023466A2374087600843CAA /* MenuViewController.m in Sources */,
 				409CF2552373B8B3002E5B3A /* ViewController.m in Sources */,
+				402346672374086D00843CAA /* MessageViewController.m in Sources */,
+				409CF2B42373C2BE002E5B3A /* TKBackUpInputPasswordView.m in Sources */,
+				4023465A2373EFD300843CAA /* TKNavigationController.m in Sources */,
+				4023464F2373E40B00843CAA /* HomeViewController.m in Sources */,
+				409CF2AE2373C2BE002E5B3A /* TKTextField.m in Sources */,
+				4065C456237509030089A78D /* TKAuthenticationDetailVC.m in Sources */,
+				409CF2AD2373C2BE002E5B3A /* TKIdentityImagesCell.m in Sources */,
 				409CF2602373B8B4002E5B3A /* main.m in Sources */,
+				409CF2AF2373C2BE002E5B3A /* TKPhotoPicker.m in Sources */,
+				403103982383D3B50088FEAE /* BaseTextFieldController.m in Sources */,
+				409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */,
+				402346562373E4AD00843CAA /* Account.m in Sources */,
+				4065C45F23753D5E0089A78D /* TKTransferRecordVC.m in Sources */,
+				409CF2792373C1B2002E5B3A /* UIImage+tks_kit.m in Sources */,
+				409CF2AC2373C2BE002E5B3A /* TKIdentityAuthenticationVC.m in Sources */,
+				402346552373E4AD00843CAA /* UITools.m in Sources */,
+				409CF2AA2373C2BE002E5B3A /* TokenCompanyCell.m in Sources */,
+				402346612374084A00843CAA /* MineViewController.m in Sources */,
+				40894536238545D5007D9A50 /* TKSingletonManager.m in Sources */,
+				409CF2AB2373C2BE002E5B3A /* TKCompanyAuthenticationVC.m in Sources */,
+				409CF2B12373C2BE002E5B3A /* TKBackupPswTextFiedCell.m in Sources */,
+				403103922383CED90088FEAE /* ReceiveViewController.m in Sources */,
+				4023467023741E2800843CAA /* TKLXAuthenticationVC.m in Sources */,
+				40D721832387AEE300414ABC /* BackupViewController.m in Sources */,
 				409CF2522373B8B3002E5B3A /* AppDelegate.m in Sources */,
-				409CF26D2373BB41002E5B3A /* TKHello.m in Sources */,
+				409CF2B22373C2BE002E5B3A /* TKBackupTitleDetailCell.m in Sources */,
+				4023466D2374156800843CAA /* TKBaseViewController.m in Sources */,
+				4065C46623755AA60089A78D /* TKTransferRecordModel.m in Sources */,
+				40DBEAC7237EA9BC002970E1 /* TKResetPasswordVC.m in Sources */,
+				402346642374086000843CAA /* ShoppingViewController.m in Sources */,
+				40DBEACA237EB51B002970E1 /* TKResetPasswordStepCell.m in Sources */,
+				4023464C2373E3F600843CAA /* LoginViewController.m in Sources */,
+				409CF2B02373C2BE002E5B3A /* UIView+TokenView.m in Sources */,
+				4065C462237542D70089A78D /* TokenTransferRecordCell.m in Sources */,
+				40EDE4B823828C7700325286 /* TKUpdatePasswordVC.m in Sources */,
+				40894539238546E5007D9A50 /* NSString+tks_time.m in Sources */,
+				4031038F2383CDC60088FEAE /* DeliveryViewController.m in Sources */,
+				4065C459237517940089A78D /* TokenAuthDetailCell.m in Sources */,
+				409CF2B32373C2BE002E5B3A /* TKAuthenticationCodeCell.m in Sources */,
+				409CF2B62373C2BE002E5B3A /* TKIIdentityPasswordVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,20 +854,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TH4DFNVY9S;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,20 +880,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TH4DFNVY9S;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if (Account.isLogin) {
+        self.window.rootViewController = [NSClassFromString(@"HomeViewController") new];
+    }else{
+        self.window.rootViewController = [NSClassFromString(@"LoginViewController") new];
+    }
     return YES;
 }
 

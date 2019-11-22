@@ -188,9 +188,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-SWIFT_CLASS("_TtC8TokenSDK15TokenAnswerItem")
-@interface TokenAnswerItem : NSObject
-- (nonnull instancetype)initWithQuestionId:(NSString * _Nonnull)questionId answer:(NSString * _Nonnull)answer OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC8TokenSDK12TKResultData")
+@interface TKResultData : NSObject
+@property (nonatomic) BOOL success;
+@property (nonatomic, copy) NSString * _Nonnull message;
+@property (nonatomic) id _Nullable data;
+@property (nonatomic) NSInteger code;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -202,21 +206,68 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 @end
 
 
+
+
+
+@class TokenGoodsModel;
+
 @interface TokenApi (SWIFT_EXTENSION(TokenSDK))
 /// <ul>
 ///   <li>
-///     初始化,获取备份数据
+///     发货
+///   </li>
+/// </ul>
+/// \param data 发货数据
+///
+/// \param handler 回调返回data
+///
++ (void)deliveryGoodsWithData:(TokenGoodsModel * _Nonnull)data handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     确认收货
+///   </li>
+/// </ul>
+/// \param did did
+///
+/// \param certId 存证ID
+///
+/// \param toDid 转给下一个人，空自己收货
+///
+/// \param handler 回调返回data
+///
++ (void)receiptGoodsWithDid:(NSString * _Nonnull)did certId:(NSString * _Nonnull)certId toDid:(NSString * _Nullable)toDid toName:(NSString * _Nullable)toName handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     货物记录
+///   </li>
+/// </ul>
+/// \param did did
+///
+/// \param handler 回调返回data
+///
++ (void)getGoodsHistoryWithDid:(NSString * _Nonnull)did handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+@end
+
+
+
+
+@interface TokenApi (SWIFT_EXTENSION(TokenSDK))
+/// <ul>
+///   <li>
+///     初始化,获取备份数据,解密
 ///   </li>
 /// </ul>
 /// \param did did,
 ///
 /// \param phone 手机号
 ///
-/// \param code password
+/// \param code 验证码
+///
+/// \param password 密码
 ///
 /// \param handler 回调返回success:true,false ,error:错误信息
 ///
-+ (void)initSDKWithDid:(NSString * _Nonnull)did phone:(NSString * _Nonnull)phone code:(NSString * _Nonnull)code handler:(void (^ _Nonnull)(BOOL, NSString * _Nullable))handler SWIFT_METHOD_FAMILY(none);
++ (void)initSDKWithDid:(NSString * _Nonnull)did phone:(NSString * _Nonnull)phone code:(NSString * _Nonnull)code password:(NSString * _Nonnull)password handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler SWIFT_METHOD_FAMILY(none);
 /// <ul>
 ///   <li>
 ///     创建did ,创建成功,会初始化SDK
@@ -230,7 +281,19 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 ///
 /// \param handler 回调返回did
 ///
-+ (void)createUserDidWithPassword:(NSString * _Nonnull)password code:(NSString * _Nonnull)code phone:(NSString * _Nonnull)phone handler:(void (^ _Nonnull)(NSString * _Nullable, NSString * _Nullable))handler;
++ (void)createUserDidWithPassword:(NSString * _Nonnull)password code:(NSString * _Nonnull)code phone:(NSString * _Nonnull)phone handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     验证手机绑定的did是否可用
+///   </li>
+/// </ul>
+/// \param phone 手机号
+///
+/// \param code 验证码
+///
+/// \param handler (code,message,did) code=3=提示错误,  code=1=did可用， code=2=不可用去注册did
+///
++ (void)availableDidWithPhone:(NSString * _Nonnull)phone code:(NSString * _Nonnull)code handler:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, NSString * _Nullable))handler;
 /// <ul>
 ///   <li>
 ///     验证密码,必须先初始化SDK
@@ -241,93 +304,89 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 ///
 /// returns:
 /// true,false
-+ (BOOL)availablePassword:(NSString * _Nonnull)password SWIFT_WARN_UNUSED_RESULT;
++ (void)availablePasswordWithDid:(NSString * _Nonnull)did password:(NSString * _Nonnull)password handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
 /// <ul>
 ///   <li>
-///     重置密码
+///     修改密码
 ///   </li>
 /// </ul>
 /// \param did did
 ///
-/// \param passkey 密码 or 问题答案拼接的密码
+/// \param password 原密码
 ///
-/// \param newPassword 新密码 可为nil
+/// \param newPassword 新密码
 ///
-/// \param answers 新问题答案 可为nil
++ (void)updatePasswordWithDid:(NSString * _Nonnull)did password:(NSString * _Nonnull)password newPassword:(NSString * _Nonnull)newPassword handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     对外备份数据
+///   </li>
+/// </ul>
+/// \param did did
 ///
-+ (void)resetPasswordWithDid:(NSString * _Nonnull)did phone:(NSString * _Nonnull)phone code:(NSString * _Nonnull)code newPassword:(NSString * _Nonnull)newPassword handler:(void (^ _Nonnull)(BOOL, NSString * _Nullable))handler;
+/// \param dataId 数据ID
+///
+/// \param dataType 数据类型
+///
++ (void)token_backup_dataWithDid:(NSString * _Nonnull)did dataId:(NSString * _Nonnull)dataId dataType:(NSString * _Nonnull)dataType data:(NSString * _Nonnull)data handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     对外获取备份数据
+///   </li>
+/// </ul>
+/// \param did did
+///
++ (void)token_get_backup_dataWithDid:(NSString * _Nonnull)did dataId:(NSString * _Nonnull)dataId dataType:(NSString * _Nonnull)dataType handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
 @end
 
 
-@interface TokenApi (SWIFT_EXTENSION(TokenSDK))
-/// <ul>
-///   <li>
-///     创建钱包
-///   </li>
-/// </ul>
-/// \param password 密码
-///
-/// \param handler 回调返回address, keystore, privatekey
-///
-///
-/// returns:
-/// 无返回值
-+ (void)createWalletWithPassword:(NSString * _Nonnull)password handler:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull, NSString * _Nonnull))handler;
-/// <ul>
-///   <li>
-///     私钥,密码得到kestore
-///   </li>
-/// </ul>
-/// \param privatekey 私钥
-///
-/// \param password 密码
-///
-///
-/// returns:
-/// kestore
-+ (NSString * _Nullable)keystoreWithPrivatekey:(NSString * _Nonnull)privatekey password:(NSString * _Nonnull)password SWIFT_WARN_UNUSED_RESULT;
-/// <ul>
-///   <li>
-///     解密得到privatekey
-///   </li>
-/// </ul>
-/// \param keystore keystore
-///
-/// \param password 密码
-///
-///
-/// returns:
-/// privatekey
-+ (NSString * _Nullable)privatekeyWithKeystore:(NSString * _Nonnull)keystore password:(NSString * _Nonnull)password SWIFT_WARN_UNUSED_RESULT;
-@end
 
 @class UIImage;
 
 @interface TokenApi (SWIFT_EXTENSION(TokenSDK))
 /// <ul>
 ///   <li>
+///     获取解密密码节点
+///   </li>
+/// </ul>
+/// \param did did
+///
+/// \param handler 回调返回data
+///
++ (void)getDecryptPasswordServiceNodeWithDid:(NSString * _Nonnull)did handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     解密用户数据数据
+///   </li>
+/// </ul>
+/// \param did did
+///
+/// \param phone 手机号
+///
+/// \param code 验证码
+///
+/// \param handler 回调返回data
+///
++ (void)decryptPasswordWithDid:(NSString * _Nonnull)did phone:(NSString * _Nonnull)phone code:(NSString * _Nonnull)code param:(NSDictionary<NSString *, id> * _Nonnull)param handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
 ///     发送验证码
 ///   </li>
 /// </ul>
-/// \param name 姓名
-///
-/// \param identityCode 身份证
-///
 /// \param phone 手机号
 ///
 /// \param handler 回调返回
 ///
 + (void)sendCodeWithPhone:(NSString * _Nonnull)phone handler:(void (^ _Nonnull)(BOOL, NSString * _Nullable))handler;
++ (void)sendServiceCodeWithService:(NSString * _Nullable)service phone:(NSString * _Nonnull)phone handler:(void (^ _Nonnull)(BOOL, NSString * _Nullable))handler;
 /// <ul>
 ///   <li>
 ///     获取公函模版
 ///   </li>
 /// </ul>
-/// \param name 姓名
+/// \param userName 姓名
 ///
-/// \param identityCode 身份证
-///
-/// \param phone 手机号
+/// \param userIdentityCode 身份证
 ///
 /// \param handler 回调返回image
 ///
@@ -337,11 +396,9 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 ///     上传图片
 ///   </li>
 /// </ul>
-/// \param name 姓名
+/// \param did did
 ///
-/// \param identityCode 身份证
-///
-/// \param phone 手机号
+/// \param file 图
 ///
 /// \param handler 回调返回id
 ///
@@ -351,15 +408,11 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 ///     获取实名备份信息
 ///   </li>
 /// </ul>
-/// \param name 姓名
+/// \param did did
 ///
-/// \param identityCode 身份证
+/// \param handler 回调返回info, code: 0=失败，1=成功，2=不存在备份
 ///
-/// \param phone 手机号
-///
-/// \param handler 回调返回hash
-///
-+ (void)getUserAuthInfoWithDid:(NSString * _Nonnull)did handler:(void (^ _Nonnull)(NSDictionary<NSString *, NSString *> * _Nullable, NSString * _Nullable))handler;
++ (void)getUserAuthInfoWithDid:(NSString * _Nonnull)did handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
 /// <ul>
 ///   <li>
 ///     实名认证
@@ -369,11 +422,9 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 ///
 /// \param identityCode 身份证
 ///
-/// \param phone 手机号
-///
 /// \param handler 回调返回hash
 ///
-+ (void)authUserWithDid:(NSString * _Nonnull)did name:(NSString * _Nonnull)name identityCode:(NSString * _Nonnull)identityCode identityFontImg:(UIImage * _Nonnull)identityFontImg identityBackImg:(UIImage * _Nonnull)identityBackImg identityHandImg:(UIImage * _Nonnull)identityHandImg handler:(void (^ _Nonnull)(NSString * _Nullable, NSString * _Nullable))handler;
++ (void)authUserWithDid:(NSString * _Nonnull)did name:(NSString * _Nonnull)name identityCode:(NSString * _Nonnull)identityCode identityFontImg:(UIImage * _Nonnull)identityFontImg identityBackImg:(UIImage * _Nonnull)identityBackImg identityHandImg:(UIImage * _Nonnull)identityHandImg handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
 /// <ul>
 ///   <li>
 ///     公司认证
@@ -383,11 +434,45 @@ SWIFT_CLASS("_TtC8TokenSDK8TokenApi")
 ///
 /// \param creditCode 信用代码
 ///
-/// \param name,identityCode,phone 用户信息
-///
 /// \param handler 回调返回hash
 ///
-+ (void)authCompanyWithDid:(NSString * _Nonnull)did companyName:(NSString * _Nonnull)companyName creditCode:(NSString * _Nullable)creditCode name:(NSString * _Nonnull)name identityCode:(NSString * _Nonnull)identityCode licenseImg:(UIImage * _Nonnull)licenseImg isOrg:(BOOL)isOrg handler:(void (^ _Nonnull)(NSString * _Nullable, NSString * _Nullable))handler;
++ (void)authCompanyWithDid:(NSString * _Nonnull)did companyName:(NSString * _Nonnull)companyName creditCode:(NSString * _Nullable)creditCode name:(NSString * _Nonnull)name identityCode:(NSString * _Nonnull)identityCode licenseImg:(UIImage * _Nonnull)licenseImg isOrg:(BOOL)isOrg handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     是否实名认证
+///   </li>
+/// </ul>
+/// \param did 用户did
+///
+///
+/// returns:
+/// true,false
++ (void)isUserAuthenticationWithDid:(NSString * _Nonnull)did handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+/// <ul>
+///   <li>
+///     是否公司认证
+///   </li>
+/// </ul>
+/// \param did 公司did
+///
+///
+/// returns:
+/// true,false
++ (void)isCompanyAuthenticationWithDid:(NSString * _Nonnull)did handler:(void (^ _Nonnull)(TKResultData * _Nonnull))handler;
+@end
+
+
+SWIFT_CLASS("_TtC8TokenSDK20TokenCertificateItem")
+@interface TokenCertificateItem : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8TokenSDK27TokenCertificateconfirmItem")
+@interface TokenCertificateconfirmItem : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -396,6 +481,62 @@ SWIFT_CLASS("_TtC8TokenSDK14TokenStoreItem")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+SWIFT_CLASS("_TtC8TokenSDK21TokenDidInfoStoreItem")
+@interface TokenDidInfoStoreItem : TokenStoreItem
+@end
+
+
+SWIFT_CLASS("_TtC8TokenSDK19TokenSignatureModel")
+@interface TokenSignatureModel : NSObject
+@property (nonatomic, copy) NSString * _Nullable did;
+@property (nonatomic, copy) NSString * _Nullable timestamp;
+@property (nonatomic, copy) NSString * _Nullable address;
+@property (nonatomic, copy) NSString * _Nullable from;
+@property (nonatomic, copy) NSString * _Nullable to;
+@property (nonatomic, copy) NSString * _Nullable data;
+@property (nonatomic, copy) NSString * _Nullable sign;
+@property (nonatomic, copy) NSString * _Nullable txHash;
+@property (nonatomic) BOOL confirmed;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8TokenSDK14TokenGoodsItem")
+@interface TokenGoodsItem : TokenSignatureModel
+@property (nonatomic, copy) NSString * _Nullable sellerName;
+@property (nonatomic, copy) NSString * _Nullable buyerName;
+@property (nonatomic, copy) NSString * _Nullable buyerDID;
+@property (nonatomic, copy) NSString * _Nullable commodityName;
+@property (nonatomic) NSInteger commodityCount;
+@property (nonatomic) NSInteger state;
+- (NSDictionary<NSString *, id> * _Nonnull)to_dict SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC8TokenSDK15TokenGoodsModel")
+@interface TokenGoodsModel : TokenCertificateItem
++ (TokenGoodsModel * _Nonnull)deliveryWithDid:(NSString * _Nonnull)did sellerName:(NSString * _Nonnull)sellerName buyerName:(NSString * _Nonnull)buyerName buyerDID:(NSString * _Nonnull)buyerDID commodityName:(NSString * _Nonnull)commodityName commodityCount:(NSInteger)commodityCount SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC8TokenSDK26TokenSignatureHistoryModel")
+@interface TokenSignatureHistoryModel : NSObject
+@property (nonatomic, copy) NSString * _Null_unspecified did;
+@property (nonatomic, copy) NSString * _Null_unspecified id;
+@property (nonatomic, copy) NSString * _Null_unspecified type;
+@property (nonatomic, copy) NSString * _Nullable content;
+@property (nonatomic) NSInteger expiryDate;
+@property (nonatomic, copy) NSArray<TokenSignatureModel *> * _Nonnull signature;
+- (nonnull instancetype)initWithDict:(NSDictionary<NSString *, id> * _Nullable)dict OBJC_DESIGNATED_INITIALIZER;
+- (TokenSignatureModel * _Nullable)confirmSignatureModelWithDid:(NSString * _Nonnull)did SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
