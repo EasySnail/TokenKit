@@ -53,7 +53,7 @@
         bt.layer.borderWidth = 0.5;
         bt.tag = i;
         bt.titleLabel.font = [UIFont systemFontOfSize:15];
-        [bt setTitle:[NSString stringWithFormat:@"%d",i+1] forState:UIControlStateNormal];
+        [bt setTitle:[NSString stringWithFormat:@"%@",@(i+1)] forState:UIControlStateNormal];
         [bt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [bt setTitleColor:ERGBColor(0x00C1CE) forState:UIControlStateSelected];
         [self.contentView addSubview:bt];
@@ -70,7 +70,7 @@
 }
 
 - (void)updateData:(NSDictionary *)data step:(NSInteger)step{
-    NSString *str = [NSString stringWithFormat:@"您已经完成了第%ld次密码验证,\n本次验证服务由%@提供。",step,data[@"name"]];
+    NSString *str = [NSString stringWithFormat:@"您已经完成了第%@次密码验证,\n本次验证服务由%@提供。",@(step),data[@"name"]];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.alignment = NSTextAlignmentCenter;
     paragraphStyle.lineSpacing = 5;

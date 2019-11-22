@@ -302,7 +302,7 @@
             [weakSelf setType:0];
             [weakSelf.timer invalidate];
         }else{
-            weakSelf.label.text = [NSString stringWithFormat:@"       %ld",count];
+            weakSelf.label.text = [NSString stringWithFormat:@"       %@",@(count)];
         }
     }];
 }
