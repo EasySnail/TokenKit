@@ -9,7 +9,8 @@
 #import "TKTransferRecordModel.h"
 #import "UIImage+tks_kit.h"
 #import "NSString+tks_time.h"
-#import <EServiceSDK/EServiceSDK.h>
+#import "TKHeader.h"
+
 
 
 @interface TKTransferRecordModel()

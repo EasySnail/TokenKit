@@ -92,7 +92,7 @@ Pod::Spec.new do |spec|
   spec.source_files  =  "TokenCore/**/*.{h,m}"
   #  spec.exclude_files = "TokenSDK/TokenCore"
 
-  # spec.public_header_files = "Classes/**/*.h"
+ # spec.public_header_files = "TokenCore/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,11 +133,12 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
+ spec.dependency "EasyLibs", "~> 0.0.5"
+ spec.dependency "TZImagePickerController", "~> 3.2.7"
+
   spec.dependency "BigInt", "~> 4.0.0"
   spec.dependency "CryptoSwift", "~> 1.0.0"
   spec.dependency "PromiseKit", "~> 6.8.5"
   spec.dependency "Starscream", "~> 3.1.0"
   spec.dependency "secp256k1.c", "~> 0.1.2"
-  spec.dependency "EasyLibs", "~> 0.0.5"
-  spec.dependency "TZImagePickerController", "~> 3.2.7"
 end
