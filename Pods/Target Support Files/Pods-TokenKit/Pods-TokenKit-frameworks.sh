@@ -165,6 +165,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework"
+  install_framework "${PODS_ROOT}/TokenSDK/Framework/TokenSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/secp256k1.c/secp256k1.framework"
 fi
@@ -181,6 +182,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework"
+  install_framework "${PODS_ROOT}/TokenSDK/Framework/TokenSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/secp256k1.c/secp256k1.framework"
 fi

@@ -40,17 +40,19 @@ PODS:
   - SDWebImage/Core (5.0.6)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
+  - TokenSDK (0.0.2):
+    - BigInt (~> 4.0.0)
+    - CryptoSwift (~> 1.0.0)
+    - EasyLibs (~> 0.0.5)
+    - PromiseKit (~> 6.8.5)
+    - secp256k1.c (~> 0.1.2)
+    - Starscream (~> 3.1.0)
+    - TZImagePickerController (~> 3.2.7)
   - TZImagePickerController (3.2.7)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - BigInt (~> 4.0.0)
-  - CryptoSwift (~> 1.0.0)
-  - EasyLibs (~> 0.0.5)
-  - PromiseKit (~> 6.8.5)
-  - secp256k1.c (~> 0.1.2)
-  - Starscream (~> 3.1.0)
-  - TZImagePickerController (~> 3.2.7)
+  - TokenSDK (~> 0.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -65,6 +67,7 @@ SPEC REPOS:
     - SDWebImage
     - secp256k1.c
     - Starscream
+    - TokenSDK
     - TZImagePickerController
     - YYModel
 
@@ -80,9 +83,10 @@ SPEC CHECKSUMS:
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  TokenSDK: 3c920168b6112de8a9085ce6244e66da321a79ed
   TZImagePickerController: 821b81f83594a736e831a018f2a2ce31822ddf0b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 15ee6ee0cec61ac8e5507424a30915d7e10bd81f
+PODFILE CHECKSUM: b9774ab20c219b688755f9e791491135c7fe65da
 
 COCOAPODS: 1.6.2

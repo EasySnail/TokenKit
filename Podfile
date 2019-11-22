@@ -15,6 +15,6 @@ target 'TokenKit' do
 #    pod 'secp256k1.c', '~> 0.1.2'
 #
 #    pod 'TZImagePickerController' , '~> 3.2.7'
-    pod 'TokenSDK', '~> 0.0.1'
+    pod 'TokenSDK', '~> 0.0.2'
 
 end

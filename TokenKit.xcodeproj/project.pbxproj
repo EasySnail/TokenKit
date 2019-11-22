@@ -51,8 +51,6 @@
 		409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */; };
 		409CF2B62373C2BE002E5B3A /* TKIIdentityPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */; };
 		40D721832387AEE300414ABC /* BackupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D721822387AEE300414ABC /* BackupViewController.m */; };
-		40D721942387F2D400414ABC /* TokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402346442373E2D300843CAA /* TokenSDK.framework */; };
-		40D721952387F2D400414ABC /* TokenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 402346442373E2D300843CAA /* TokenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40DBEAC7237EA9BC002970E1 /* TKResetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */; };
 		40DBEACA237EB51B002970E1 /* TKResetPasswordStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */; };
 		40EDE4B823828C7700325286 /* TKUpdatePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40EDE4B723828C7700325286 /* TKUpdatePasswordVC.m */; };
@@ -66,7 +64,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				40D721952387F2D400414ABC /* TokenSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +71,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		402346442373E2D300843CAA /* TokenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TokenSDK.framework; sourceTree = "<group>"; };
 		4023464A2373E3F600843CAA /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4023464B2373E3F600843CAA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4023464D2373E40B00843CAA /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -179,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */,
-				40D721942387F2D400414ABC /* TokenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +272,6 @@
 			children = (
 				409CF26E2373BB6A002E5B3A /* Resources */,
 				409CF26A2373BB41002E5B3A /* TokenCore */,
-				409CF2692373BB1F002E5B3A /* Framework */,
 				409CF24F2373B8B3002E5B3A /* TokenKit */,
 				409CF24E2373B8B3002E5B3A /* Products */,
 				DF5433D90230BD66D2E1C5C9 /* Pods */,
@@ -311,14 +305,6 @@
 				409CF25F2373B8B4002E5B3A /* main.m */,
 			);
 			path = TokenKit;
-			sourceTree = "<group>";
-		};
-		409CF2692373BB1F002E5B3A /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				402346442373E2D300843CAA /* TokenSDK.framework */,
-			);
-			path = Framework;
 			sourceTree = "<group>";
 		};
 		409CF26A2373BB41002E5B3A /* TokenCore */ = {
@@ -634,6 +620,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${PODS_ROOT}/TokenSDK/Framework/TokenSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1.c/secp256k1.framework",
 			);
@@ -653,6 +640,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TokenSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
 			);
@@ -856,10 +844,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -882,10 +867,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
