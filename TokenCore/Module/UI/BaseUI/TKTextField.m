@@ -7,13 +7,14 @@
 //
 
 #import "TKTextField.h"
-#import "TKHeader.h"
+#import <EServiceSDK/EServiceSDK.h>
 
 @interface TKTextField()<UITextFieldDelegate>
 
 @end
 
 @implementation TKTextField
+
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -73,7 +74,7 @@
     [view addSubview:line];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(EWidth-50, 0, 50, view.height)];
     [button setTitle:@"完成" forState:UIControlStateNormal];
-    button.titleLabel.font = TKSDKFont(14);
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:ERGBColor(0x00C1CE) forState:UIControlStateNormal];
     [view addSubview:button];

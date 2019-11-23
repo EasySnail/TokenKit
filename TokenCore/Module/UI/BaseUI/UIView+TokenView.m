@@ -7,7 +7,7 @@
 //
 
 #import "UIView+TokenView.h"
-#import "TKHeader.h"
+#import <EServiceSDK/EServiceSDK.h>
 
 @implementation UIView (TokenView)
 

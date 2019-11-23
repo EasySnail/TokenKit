@@ -329,13 +329,13 @@
 		409CF2762373C16E002E5B3A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				409CF2772373C1B2002E5B3A /* UIImage+tks_kit.h */,
-				409CF2782373C1B2002E5B3A /* UIImage+tks_kit.m */,
-				409CF2B82373C4B8002E5B3A /* TKHeader.h */,
 				40894534238545D5007D9A50 /* TKSingletonManager.h */,
 				40894535238545D5007D9A50 /* TKSingletonManager.m */,
 				40894537238546E5007D9A50 /* NSString+tks_time.h */,
 				40894538238546E5007D9A50 /* NSString+tks_time.m */,
+				409CF2772373C1B2002E5B3A /* UIImage+tks_kit.h */,
+				409CF2782373C1B2002E5B3A /* UIImage+tks_kit.m */,
+				409CF2B82373C4B8002E5B3A /* TKHeader.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -427,14 +427,14 @@
 		409CF2902373C2BD002E5B3A /* BaseUI */ = {
 			isa = PBXGroup;
 			children = (
-				4023466B2374156800843CAA /* TKBaseViewController.h */,
-				4023466C2374156800843CAA /* TKBaseViewController.m */,
-				402346582373EFD300843CAA /* TKNavigationController.h */,
-				402346592373EFD300843CAA /* TKNavigationController.m */,
 				409CF2962373C2BD002E5B3A /* TKTextField.h */,
 				409CF2912373C2BD002E5B3A /* TKTextField.m */,
 				409CF2952373C2BD002E5B3A /* UIView+TokenView.h */,
 				409CF2972373C2BD002E5B3A /* UIView+TokenView.m */,
+				402346582373EFD300843CAA /* TKNavigationController.h */,
+				402346592373EFD300843CAA /* TKNavigationController.m */,
+				4023466B2374156800843CAA /* TKBaseViewController.h */,
+				4023466C2374156800843CAA /* TKBaseViewController.m */,
 				409CF2922373C2BD002E5B3A /* ImagePicker */,
 			);
 			path = BaseUI;
@@ -541,6 +541,7 @@
 				TargetAttributes = {
 					409CF24C2373B8B3002E5B3A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -841,19 +842,22 @@
 			baseConfigurationReference = 9BEDD1DD035DB69C391CCA29 /* Pods-TokenKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -864,19 +868,21 @@
 			baseConfigurationReference = 8132491118F87E60FA1CCA64 /* Pods-TokenKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
