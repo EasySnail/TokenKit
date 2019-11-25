@@ -18,7 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://bcard.tokentm.net/h5/share/user-agreement.html"]];
+    NSData *dd = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://bcard.tokentm.net/h5/share/user-agreement.html"]];
+    
+    [dd length];
     if (Account.isLogin) {
         self.window.rootViewController = [NSClassFromString(@"HomeViewController") new];
     }else{

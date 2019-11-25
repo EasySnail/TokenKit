@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "TKNavigationController.h"
 #import <TokenSDK/TokenSDK.h>
+#import <TokenSDK/TokenSDK-Swift.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -17,6 +17,7 @@
 #import "TKPhotoPicker.h"
 #import "TKSingletonManager.h"
 #import <TokenSDK/TokenSDK.h>
+#import <TokenSDK/TokenSDK-Swift.h>
 #import "NSString+tks_time.h"
 
 

@@ -50,6 +50,8 @@
 		409CF2B42373C2BE002E5B3A /* TKBackUpInputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A42373C2BD002E5B3A /* TKBackUpInputPasswordView.m */; };
 		409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */; };
 		409CF2B62373C2BE002E5B3A /* TKIIdentityPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */; };
+		40D2F923238BC0960081A215 /* TokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D2F8EF238BBB6F0081A215 /* TokenSDK.framework */; };
+		40D2F924238BC0960081A215 /* TokenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40D2F8EF238BBB6F0081A215 /* TokenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40D721832387AEE300414ABC /* BackupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D721822387AEE300414ABC /* BackupViewController.m */; };
 		40DBEAC7237EA9BC002970E1 /* TKResetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */; };
 		40DBEACA237EB51B002970E1 /* TKResetPasswordStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */; };
@@ -58,12 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		40D721962387F2D400414ABC /* Embed Frameworks */ = {
+		40D2F925238BC0960081A215 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				40D2F924238BC0960081A215 /* TokenSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +159,7 @@
 		409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackUpSecretKeyView.m; sourceTree = "<group>"; };
 		409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKIIdentityPasswordVC.m; sourceTree = "<group>"; };
 		409CF2B82373C4B8002E5B3A /* TKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKHeader.h; sourceTree = "<group>"; };
+		40D2F8EF238BBB6F0081A215 /* TokenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TokenSDK.framework; sourceTree = "<group>"; };
 		40D721812387AEE300414ABC /* BackupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupViewController.h; sourceTree = "<group>"; };
 		40D721822387AEE300414ABC /* BackupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupViewController.m; sourceTree = "<group>"; };
 		40DBEAC5237EA9BC002970E1 /* TKResetPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKResetPasswordVC.h; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */,
+				40D2F923238BC0960081A215 /* TokenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +275,7 @@
 		409CF2442373B8B3002E5B3A = {
 			isa = PBXGroup;
 			children = (
+				40D2F8EE238BBB6F0081A215 /* Framework */,
 				409CF26E2373BB6A002E5B3A /* Resources */,
 				409CF26A2373BB41002E5B3A /* TokenCore */,
 				409CF24F2373B8B3002E5B3A /* TokenKit */,
@@ -490,6 +496,14 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		40D2F8EE238BBB6F0081A215 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				40D2F8EF238BBB6F0081A215 /* TokenSDK.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		AFC0328D631E7928088C556D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,7 +533,7 @@
 				409CF24A2373B8B3002E5B3A /* Frameworks */,
 				409CF24B2373B8B3002E5B3A /* Resources */,
 				9F5628279C0619EF93F74739 /* [CP] Embed Pods Frameworks */,
-				40D721962387F2D400414ABC /* Embed Frameworks */,
+				40D2F925238BC0960081A215 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -541,7 +555,7 @@
 				TargetAttributes = {
 					409CF24C2373B8B3002E5B3A = {
 						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -621,7 +635,6 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
-				"${PODS_ROOT}/TokenSDK/Framework/TokenSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1.c/secp256k1.framework",
 			);
@@ -641,7 +654,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TokenSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
 			);
@@ -846,19 +858,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TokenCore/TokenKit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -872,18 +887,21 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "TokenCore/TokenKit-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
