@@ -8,13 +8,6 @@ use_frameworks!
 
 target 'TokenKit' do
     project 'TokenKit'
-    pod 'BigInt', '~> 5.0.0'
-    pod 'CryptoSwift', '~> 1.2.0'
-    pod 'PromiseKit', '~> 6.12.0'
-    pod 'Starscream', '~> 3.1.1'
-    pod 'secp256k1.c', '~> 0.1.2'
-    
-    pod 'EasyLibs', '~> 0.0.5'
-    pod 'TZImagePickerController', '~> 3.2.7'
+    pod 'TokenSDK', '~> 0.0.3'
 
 end

@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TokenKit"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "TokenSDK.区块链，公司认证，实名认证，上链服务，身份密码，加密存储服务"
 
   # This description is used to generate tags and improve search results.
@@ -117,7 +117,7 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   spec.frameworks = "UIKit", "Foundation", "Photos"
-  spec.vendored_frameworks = "Framework/TokenSDK.framework"
+#  spec.vendored_frameworks = "Framework/TokenSDK.framework"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
   spec.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}
@@ -133,13 +133,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
- spec.dependency 'BigInt', '~> 5.0.0'
- spec.dependency 'CryptoSwift', '~> 1.2.0'
- spec.dependency 'PromiseKit', '~> 6.12.0'
- spec.dependency 'Starscream', '~> 3.1.1'
- spec.dependency 'secp256k1.c', '~> 0.1.2'
+ spec.dependency 'TokenSDK', '~> 0.0.3'
 
- spec.dependency 'EasyLibs', '~> 0.0.5'
- spec.dependency 'TZImagePickerController', '~> 3.2.7'
 
 end
