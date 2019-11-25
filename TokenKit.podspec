@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TokenKit"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "TokenSDK.区块链，公司认证，实名认证，上链服务，身份密码，加密存储服务"
 
   # This description is used to generate tags and improve search results.
@@ -120,7 +120,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "Framework/TokenSDK.framework"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
-
+  spec.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}
   spec.swift_version = '5.0'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

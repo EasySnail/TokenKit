@@ -15,6 +15,16 @@
 
 @implementation TKNavigationController
 
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController{
+    self = [super initWithRootViewController:rootViewController];
+    if (self) {
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
+        rootViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
