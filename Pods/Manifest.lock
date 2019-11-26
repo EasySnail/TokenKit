@@ -76,7 +76,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TokenSDK:
-    :commit: 66b86e330705dc87642221c3296f5081778d0ef1
+    :commit: 4dcabc06ca2e77fb3e8492d7d855f5a83d00ff23
     :git: https://github.com/EasySnail/TokenSDK.git
 
 SPEC CHECKSUMS:
