@@ -29,6 +29,7 @@
 
 + (void)open_identityPasswordVCWithPhone:(NSString *__nullable)phone from:(UIViewController *)fromVC handler:(void (^)(NSString* did))successBlock{
     TKIIdentityPasswordVC *vc = [[TKIIdentityPasswordVC alloc] init];
+    vc.successBlock = successBlock;
     vc.phone = phone;
     vc.successBlock = successBlock;
     [fromVC presentViewController:[[TKNavigationController alloc] initWithRootViewController:vc] animated:true completion:nil];
