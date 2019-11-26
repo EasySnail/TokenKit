@@ -203,6 +203,7 @@
         TKTextFieldModel *phoneModel = [[TKTextFieldModel alloc] init];
         [phoneModel setValuesForKeysWithDictionary:@{@"title":@"手机号",@"placeholder":@"请输入您的手机号",
                                                      @"keyboardType":@(1),@"maxLength":@(11)}];
+        phoneModel.value = _phone;
         [_phoneCell updateData:phoneModel];
         
         self.codeCell = [[TKAuthenticationCodeCell alloc] initWithType:1];

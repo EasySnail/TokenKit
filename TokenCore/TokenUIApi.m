@@ -27,6 +27,13 @@
     return [[TKNavigationController alloc] initWithRootViewController:vc];
 }
 
++ (void)open_identityPasswordVCWithPhone:(NSString *__nullable)phone from:(UIViewController *)fromVC handler:(void (^)(NSString* did))successBlock{
+    TKIIdentityPasswordVC *vc = [[TKIIdentityPasswordVC alloc] init];
+    vc.phone = phone;
+    vc.successBlock = successBlock;
+    [fromVC presentViewController:[[TKNavigationController alloc] initWithRootViewController:vc] animated:true completion:nil];
+}
+
 
 //重置密码
 + (UIViewController *)token_reset_identityPasswordVC:(NSString *)did handler:(void (^)(id data))successBlock{

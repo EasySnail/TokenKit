@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TKIIdentityPasswordVC : TKBaseViewController
 
+@property(nonatomic,copy)NSString *phone;
+
 + (NSString *)validatePassword:(NSString *)psw psw2:(NSString *)psw2;
 
 @end

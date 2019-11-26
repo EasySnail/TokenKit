@@ -25,6 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (UINavigationController *)token_identityPasswordVC:(void (^)(NSString* did))successBlock;
 
 
+/**
+*  打开身份密码页
+* @param phone 手机
+* @param successBlock 公司认证成功后，回调hash
+*
+*/
++ (void)open_identityPasswordVCWithPhone:(NSString *__nullable)phone from:(UIViewController *)fromVC handler:(void (^)(NSString* did))successBlock;
+
 
 /**
  *  链信认证
