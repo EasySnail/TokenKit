@@ -50,6 +50,7 @@
 		409CF2B42373C2BE002E5B3A /* TKBackUpInputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A42373C2BD002E5B3A /* TKBackUpInputPasswordView.m */; };
 		409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */; };
 		409CF2B62373C2BE002E5B3A /* TKIIdentityPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */; };
+		40ACB99B238CF385006CCF0C /* TokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40ACB99A238CF385006CCF0C /* TokenSDK.framework */; };
 		40D721832387AEE300414ABC /* BackupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D721822387AEE300414ABC /* BackupViewController.m */; };
 		40DBEAC7237EA9BC002970E1 /* TKResetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */; };
 		40DBEACA237EB51B002970E1 /* TKResetPasswordStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */; };
@@ -156,6 +157,7 @@
 		409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackUpSecretKeyView.m; sourceTree = "<group>"; };
 		409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKIIdentityPasswordVC.m; sourceTree = "<group>"; };
 		409CF2B82373C4B8002E5B3A /* TKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKHeader.h; sourceTree = "<group>"; };
+		40ACB99A238CF385006CCF0C /* TokenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TokenSDK.framework; sourceTree = "<group>"; };
 		40D721812387AEE300414ABC /* BackupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupViewController.h; sourceTree = "<group>"; };
 		40D721822387AEE300414ABC /* BackupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupViewController.m; sourceTree = "<group>"; };
 		40DBEAC5237EA9BC002970E1 /* TKResetPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKResetPasswordVC.h; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5857D2721101B69B0D0211D5 /* Pods_TokenKit.framework in Frameworks */,
+				40ACB99B238CF385006CCF0C /* TokenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +273,7 @@
 		409CF2442373B8B3002E5B3A = {
 			isa = PBXGroup;
 			children = (
+				40ACB999238CF385006CCF0C /* Framework */,
 				409CF26E2373BB6A002E5B3A /* Resources */,
 				409CF26A2373BB41002E5B3A /* TokenCore */,
 				409CF24F2373B8B3002E5B3A /* TokenKit */,
@@ -488,6 +492,14 @@
 				40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		40ACB999238CF385006CCF0C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				40ACB99A238CF385006CCF0C /* TokenSDK.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		AFC0328D631E7928088C556D /* Frameworks */ = {
@@ -813,7 +825,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -836,7 +851,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
