@@ -27,13 +27,17 @@
 
 - (void)loginClick{
     //设置身份密码
-    UINavigationController *vc = [TokenUIApi token_identityPasswordVC:^(NSString * _Nonnull did) {
-        //设置成功,存储到服器
-        [Account updateData:@{@"did":did}];
-        [self dismissViewControllerAnimated:true completion:nil];
-        [self presentViewController:[NSClassFromString(@"HomeViewController") new] animated:true completion:nil];
+    
+    [TokenUIApi open_identityPasswordVCWithPhone:nil from:self handler:^(NSString * _Nonnull did) {
+        
     }];
-    [self presentViewController:vc animated:true completion:nil];
+//    UINavigationController *vc = [TokenUIApi token_identityPasswordVC:^(NSString * _Nonnull did) {
+//        //设置成功,存储到服器
+//        [Account updateData:@{@"did":did}];
+//        [self dismissViewControllerAnimated:true completion:nil];
+//        [self presentViewController:[NSClassFromString(@"HomeViewController") new] animated:true completion:nil];
+//    }];
+//    [self presentViewController:vc animated:true completion:nil];
 }
 
 /*
