@@ -40,7 +40,7 @@ PODS:
   - SDWebImage/Core (5.0.6)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
-  - TokenSDK (0.0.3):
+  - TokenSDK (0.0.5):
     - BigInt (~> 5.0.0)
     - CryptoSwift (~> 1.2.0)
     - EasyLibs (~> 0.0.5)
@@ -52,7 +52,7 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - TokenSDK (~> 0.0.3)
+  - TokenSDK (from `https://github.com/EasySnail/TokenSDK.git`)
 
 SPEC REPOS:
   trunk:
@@ -67,9 +67,17 @@ SPEC REPOS:
     - SDWebImage
     - secp256k1.c
     - Starscream
-    - TokenSDK
     - TZImagePickerController
     - YYModel
+
+EXTERNAL SOURCES:
+  TokenSDK:
+    :git: https://github.com/EasySnail/TokenSDK.git
+
+CHECKOUT OPTIONS:
+  TokenSDK:
+    :commit: 66b86e330705dc87642221c3296f5081778d0ef1
+    :git: https://github.com/EasySnail/TokenSDK.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -83,10 +91,10 @@ SPEC CHECKSUMS:
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  TokenSDK: 5cdd3a08d1d291cc09d198f67da7e055b1c1cb50
+  TokenSDK: e5e6c9537cfbceb8d8effd36ea79e7bb7f8b7364
   TZImagePickerController: 821b81f83594a736e831a018f2a2ce31822ddf0b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: ec9fb0e43c22623473e391d0c865ea0aa060ac8c
+PODFILE CHECKSUM: 39381f18dc7c1453536049d8d3a724cfa4e63c44
 
 COCOAPODS: 1.8.4

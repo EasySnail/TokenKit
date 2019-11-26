@@ -8,6 +8,6 @@ use_frameworks!
 
 target 'TokenKit' do
     project 'TokenKit'
-    pod 'TokenSDK', '~> 0.0.5'
+    pod 'TokenSDK', :git => 'https://github.com/EasySnail/TokenSDK.git'
 
 end
