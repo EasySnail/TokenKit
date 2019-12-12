@@ -10,6 +10,7 @@
 #import "TKHeader.h"
 
 @interface TKBaseViewController ()
+@property(nonatomic,retain,readwrite)TKNavigationBar *tk_navigationBar;
 
 @end
 
@@ -34,6 +35,17 @@
     }
     
     // Do any additional setup after loading the view.
+}
+
+- (TKNavigationBar *)tk_navigationBar{
+    if (_tk_navigationBar == nil) {
+        _tk_navigationBar = [[TKNavigationBar alloc] init];
+        if (self.navigationController.viewControllers.firstObject != self) {
+            [_tk_navigationBar.backItem addTarget:self action:@selector(e_didiBackClick:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        [self.view addSubview:_tk_navigationBar];
+    }
+    return _tk_navigationBar;
 }
 
 - (void)e_didiBackClick:(id)sender{

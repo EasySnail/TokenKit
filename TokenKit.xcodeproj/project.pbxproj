@@ -50,6 +50,7 @@
 		409CF2B42373C2BE002E5B3A /* TKBackUpInputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A42373C2BD002E5B3A /* TKBackUpInputPasswordView.m */; };
 		409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */; };
 		409CF2B62373C2BE002E5B3A /* TKIIdentityPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */; };
+		40AFB33E239A4A22004EF59C /* TKNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AFB33D239A4A22004EF59C /* TKNavigationBar.m */; };
 		40D721832387AEE300414ABC /* BackupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D721822387AEE300414ABC /* BackupViewController.m */; };
 		40DBEAC7237EA9BC002970E1 /* TKResetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC6237EA9BC002970E1 /* TKResetPasswordVC.m */; };
 		40DBEACA237EB51B002970E1 /* TKResetPasswordStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEAC9237EB51B002970E1 /* TKResetPasswordStepCell.m */; };
@@ -156,6 +157,8 @@
 		409CF2A52373C2BD002E5B3A /* TKBackUpSecretKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKBackUpSecretKeyView.m; sourceTree = "<group>"; };
 		409CF2A62373C2BD002E5B3A /* TKIIdentityPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKIIdentityPasswordVC.m; sourceTree = "<group>"; };
 		409CF2B82373C4B8002E5B3A /* TKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKHeader.h; sourceTree = "<group>"; };
+		40AFB33C239A4A22004EF59C /* TKNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKNavigationBar.h; sourceTree = "<group>"; };
+		40AFB33D239A4A22004EF59C /* TKNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKNavigationBar.m; sourceTree = "<group>"; };
 		40D721812387AEE300414ABC /* BackupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupViewController.h; sourceTree = "<group>"; };
 		40D721822387AEE300414ABC /* BackupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupViewController.m; sourceTree = "<group>"; };
 		40DBEAC5237EA9BC002970E1 /* TKResetPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKResetPasswordVC.h; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 				409CF2972373C2BD002E5B3A /* UIView+TokenView.m */,
 				402346582373EFD300843CAA /* TKNavigationController.h */,
 				402346592373EFD300843CAA /* TKNavigationController.m */,
+				40AFB33C239A4A22004EF59C /* TKNavigationBar.h */,
+				40AFB33D239A4A22004EF59C /* TKNavigationBar.m */,
 				4023466B2374156800843CAA /* TKBaseViewController.h */,
 				4023466C2374156800843CAA /* TKBaseViewController.m */,
 				409CF2922373C2BD002E5B3A /* ImagePicker */,
@@ -518,8 +523,8 @@
 				409CF2492373B8B3002E5B3A /* Sources */,
 				409CF24A2373B8B3002E5B3A /* Frameworks */,
 				409CF24B2373B8B3002E5B3A /* Resources */,
-				9F5628279C0619EF93F74739 /* [CP] Embed Pods Frameworks */,
 				40D2F925238BC0960081A215 /* Embed Frameworks */,
+				0552FD5ADC9965D5BC9547CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -578,6 +583,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0552FD5ADC9965D5BC9547CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		643CCE49D4FE56A27C891861 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,23 +622,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F5628279C0619EF93F74739 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TokenKit/Pods-TokenKit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -636,6 +641,7 @@
 				409CF2AD2373C2BE002E5B3A /* TKIdentityImagesCell.m in Sources */,
 				409CF2602373B8B4002E5B3A /* main.m in Sources */,
 				409CF2AF2373C2BE002E5B3A /* TKPhotoPicker.m in Sources */,
+				40AFB33E239A4A22004EF59C /* TKNavigationBar.m in Sources */,
 				403103982383D3B50088FEAE /* BaseTextFieldController.m in Sources */,
 				409CF2B52373C2BE002E5B3A /* TKBackUpSecretKeyView.m in Sources */,
 				402346562373E4AD00843CAA /* Account.m in Sources */,
@@ -727,6 +733,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -786,6 +793,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -813,13 +821,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -839,13 +844,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TH4DFNVY9S;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)//TokenKit/PrefixHeader.pch";
 				INFOPLIST_FILE = TokenKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.token.TokenKit.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";

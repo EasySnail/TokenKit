@@ -1,6 +1,6 @@
 {
   "name": "TokenSDK",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "summary": "TokenSDK,Token qukuailian,区块链,身份管理,企业管理",
   "description": "TokenSDK,Token qukuailian,区块链,身份管理,企业管理.....",
   "homepage": "https://github.com/EasySnail/TokenSDK",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/EasySnail/TokenSDK.git",
-    "tag": "0.0.5"
+    "tag": "0.0.6"
   },
   "frameworks": [
     "UIKit",
@@ -26,7 +26,7 @@
   "swift_versions": "5.0",
   "dependencies": {
     "EasyLibs": [
-      "~> 0.0.5"
+
     ],
     "BigInt": [
       "~> 5.0.0"

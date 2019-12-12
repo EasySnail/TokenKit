@@ -89,6 +89,7 @@
 - (void)commitClick{
     NSString *phone = self.phoneCell.textField.text;
     NSString *code = self.codeCell.textField.text;
+    if (![phone validateMobile]) {[self e_showMessage:@"手机号有误"];return;}
     if (code.length <= 0) {return [self e_showMessage:@"请输入验证码"];}
     [self e_showHudText:@""];
     WeakSelf
@@ -154,7 +155,7 @@
         self.phoneCell = [[TKAuthenticationTextFieldCell alloc] initWithType:1];
         TKTextFieldModel *md = [TKTextFieldModel phoneModel];
         md.value = _phone;
-        md.disabled = true;
+        md.disabled = _phone.length > 0;
         [self.phoneCell updateData:md];
         
         self.codeCell = [[TKAuthenticationCodeCell alloc] initWithType:1];

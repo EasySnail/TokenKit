@@ -117,7 +117,7 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   spec.frameworks = "UIKit", "Foundation", "Photos"
-  spec.vendored_frameworks = "Framework/TokenSDK.framework"
+#  spec.vendored_frameworks = "Framework/TokenSDK.framework"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
  # spec.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}

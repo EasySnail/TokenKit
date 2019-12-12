@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TKNavigationBar.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)BOOL navigationBackEnabled;        ///< 显示返回,默认true
 
 @property(nonatomic,copy)void(^successBlock)(id data);
+
+@property(nonatomic,retain,readonly)TKNavigationBar *tk_navigationBar;
+
 
 @end
 

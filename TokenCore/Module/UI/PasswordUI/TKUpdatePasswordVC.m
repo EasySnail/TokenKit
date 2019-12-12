@@ -43,6 +43,7 @@
 }
 
 - (void)commitClick{
+    [self.view endEditing:true];
     NSString *pwd0 = nil;
     if (self.pwd == nil) {
         pwd0 = self.cell1.textField.text;
@@ -71,7 +72,6 @@
             [weakSelf e_showMessage:data.message];
         }
     }];
-
 }
 
 - (void)initTableView{

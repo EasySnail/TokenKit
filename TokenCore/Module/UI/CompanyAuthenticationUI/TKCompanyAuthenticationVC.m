@@ -28,6 +28,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     WeakSelf
     [self e_showHudText:@""];
+
+    
     [TokenApi getUserAuthInfoWithDid:_did handler:^(TKResultData *rdata) {
         if (!rdata.success) {
             if (rdata.code == 2) {
@@ -43,6 +45,7 @@
             [weakSelf initView];
         }
     }];
+    
 }
 
 - (void)commitClick{
@@ -64,7 +67,10 @@
     WeakSelf
     [TokenApi authCompanyWithDid:_did companyName:_companyName creditCode:_code name:_name identityCode:_identityCode licenseImg:image isOrg:_isOrg handler:^(TKResultData *rdata) {
         if (rdata.success) {
-            [weakSelf e_showMessage:@"成功"];
+            [weakSelf e_hideHud];
+            if (weakSelf.successBlock) {
+                weakSelf.successBlock(rdata.data);
+            }
         }else{
             [weakSelf e_showMessage:rdata.message];
         }

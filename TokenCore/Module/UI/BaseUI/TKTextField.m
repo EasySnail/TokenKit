@@ -43,13 +43,13 @@
 - (void)setSecureTextEntry:(BOOL)secureTextEntry{
     [super setSecureTextEntry:secureTextEntry];
     if (self.textContentType == nil) {
-        if (@available(iOS 12.0, *)) {
-            self.textContentType = UITextContentTypeNewPassword;
-        } else if (@available(iOS 11.0, *)) {
-            self.textContentType = UITextContentTypePassword;
-        } else {
-    
-        }
+//        if (@available(iOS 12.0, *)) {
+//            self.textContentType = UITextContentTypeNewPassword;
+//        } else if (@available(iOS 11.0, *)) {
+//            self.textContentType = UITextContentTypePassword;
+//        } else {
+//
+//        }
     }
 }
 

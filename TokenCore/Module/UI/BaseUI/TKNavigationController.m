@@ -27,7 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     NSDictionary *textAttributes = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:16],
                                      NSForegroundColorAttributeName : [UIColor whiteColor]
                                      };

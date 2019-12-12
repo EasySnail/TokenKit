@@ -15,6 +15,7 @@
 #import "TKLXAuthenticationVC.h"
 #import "TKAuthenticationDetailVC.h"
 #import <EServiceSDK/EServiceSDK.h>
+#import "TKUpdatePasswordVC.h"
 
 
 @implementation TokenUIApi
@@ -82,14 +83,22 @@
 
 
 //公司认证
-+ (UIViewController *)token_companyAuthenticationVC:(NSString *)did code:(NSString * __nullable)code companyName:(NSString *)companyName handler:(void (^)(id))successBlock{
+
++ (void)open_companyAuthenticationVC:(NSString *)did code:(NSString * __nullable)code companyName:(NSString *)companyName isOrg:(BOOL)isOrg from:(UIViewController *)fromVC handler:(void (^)(id))successBlock{
     TKCompanyAuthenticationVC *vc = [[TKCompanyAuthenticationVC alloc] init];
-    vc.successBlock = successBlock;
+    __weak TKCompanyAuthenticationVC *weakVc = vc;
+    vc.successBlock = ^(id  _Nonnull data) {
+        [weakVc alertMessage:@"认证成功" actions:@[@"确定"] handler:^(NSInteger index) {
+            [fromVC dismissViewControllerAnimated:true completion:nil];
+            successBlock(data);
+        }];
+    };
     vc.code = code;
     vc.companyName = companyName;
     vc.did = did;
-    vc.isOrg = false;
-    return vc;
+    vc.isOrg = isOrg;
+    UINavigationController *nvc = [[TKNavigationController alloc] initWithRootViewController:vc];
+    [fromVC presentViewController:nvc animated:true completion:nil];
 }
 
 

@@ -109,8 +109,10 @@ static TKBackUpSecretKeyView *_pswsharedInstance = nil;
         if (pwd.length == 0) {
             return [view e_showMessage:@"请输入密码"];
         }
+        [view e_showHudText:@""];
         [TokenApi availablePasswordWithDid:did password:pwd handler:^(TKResultData *data) {
             if (data.success) {
+                [view e_hideHud];
                 [view hide:true];
                 handler(true);
             }else{
@@ -125,7 +127,7 @@ static TKBackUpSecretKeyView *_pswsharedInstance = nil;
     if (self.superview != nil) {return;}
     [self.inputPasswordView reset];
     [self.backgroundView addSubview:self];
-    self.currentView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+    self.currentView.transform = CGAffineTransformMakeScale(0.75, 0.75);
     self.currentView.alpha = 1;
     self.currentView.hidden = false;
     
@@ -181,7 +183,7 @@ static TKBackUpSecretKeyView *_pswsharedInstance = nil;
 ///< 创建view
 - (TKBackUpInputPasswordView *)tk_crateInPutView{
     TKBackUpInputPasswordView *view = [[TKBackUpInputPasswordView alloc] initWithFrame:CGRectMake(0, 0, ViewScale(300), _type != 0 ? 310 : 350) type:_type];
-    view.center = CGPointMake(self.centerX, self.centerY-50);
+    view.center = CGPointMake(self.centerX, self.centerY-70);
     return view;
 }
 

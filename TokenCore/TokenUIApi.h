@@ -12,6 +12,10 @@
 #import <TokenSDK/TokenSDK.h>
 #import <TokenSDK/TokenSDK-Swift.h>
 
+#import "TKUpdatePasswordVC.h"
+#import "TKResetPasswordVC.h"
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TokenUIApi : NSObject
@@ -23,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 + (UINavigationController *)token_identityPasswordVC:(void (^)(NSString* did))successBlock;
+
 
 
 /**
@@ -67,9 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  企业认证
  *
- *  @return viewController
+ *  @param did  did
+ *  @param code 企业统一信用码
+ *  @param companyName 公司名
  */
-+ (UIViewController *)token_companyAuthenticationVC:(NSString *)did code:(NSString * __nullable)code companyName:(NSString *)companyName handler:(void (^)(id))successBlock;
++ (void)open_companyAuthenticationVC:(NSString *)did code:(NSString * __nullable)code companyName:(NSString *)companyName isOrg:(BOOL)isOrg from:(UIViewController *)fromVC handler:(void (^)(id))successBlock;
 
 /**
  *  组织认证
